@@ -3,9 +3,6 @@
 
 <head>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -18,7 +15,7 @@ content="Portfolio of Evance Charles ChalloKingsman, a web developer, graphic de
 content="ChalloKingsman Design Site">
 
 <meta property="og:description"
-content="Web Developer, Graphic Designer, AI Assistance, Cybersecurity Specialist and Tech Wizard.">
+content="Web Developer, Graphic Designer, AI Assistance Specialist, Cybersecurity Specialist and Tech Wizard.">
 
 <meta property="og:image"
 content="MEE.jpeg">
@@ -26,11 +23,14 @@ content="MEE.jpeg">
 <meta property="og:type"
 content="website">
 
-<title>ChalloKingsman Design Site</title>
+<title>CHALLOKINGSMAN DESIGN SITE</title>
 
 <link rel="icon"
 type="image/png"
 href="My logo back.jpeg">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -91,6 +91,33 @@ center/cover fixed;
 
 }
 
+/* DARK MODE */
+
+.dark-mode{
+
+background:#0f172a;
+color:white;
+
+}
+
+.dark-mode .card,
+.dark-mode .hero-card,
+.dark-mode .table-wrap,
+.dark-mode .contact-panel,
+.dark-mode .gallery-section{
+
+background:#1e293b;
+color:white;
+
+}
+
+.dark-mode .highlight{
+
+background:#334155;
+color:white;
+
+}
+
 /* LOADER */
 
 #loader{
@@ -111,33 +138,7 @@ font-weight:bold;
 
 color:white;
 
-z-index:9999;
-
-}
-
-/* DARK MODE */
-
-.dark-mode{
-
-background:#0f172a;
-color:white;
-
-}
-
-.dark-mode .card,
-.dark-mode .hero-card,
-.dark-mode .table-wrap,
-.dark-mode .contact-panel{
-
-background:#1e293b;
-color:white;
-
-}
-
-.dark-mode .highlight{
-
-background:#334155;
-color:white;
+z-index:99999;
 
 }
 
@@ -216,7 +217,9 @@ border:none;
 
 cursor:pointer;
 
-display:inline-block;
+display:inline-flex;
+align-items:center;
+gap:8px;
 
 }
 
@@ -225,21 +228,7 @@ display:inline-block;
 
 background:var(--blue);
 
-transform:translateY(-2px);
-
-}
-
-.button.secondary{
-
-background:white;
-color:var(--ink);
-
-}
-
-.button.secondary:hover{
-
-background:var(--green-dark);
-color:white;
+transform:translateY(-3px);
 
 }
 
@@ -283,7 +272,7 @@ margin-bottom:12px;
 
 }
 
-h1{
+#typing{
 
 font-size:clamp(2.5rem, 6vw, 5rem);
 
@@ -319,7 +308,7 @@ flex-wrap:wrap;
 
 background:var(--panel);
 
-border-radius:10px;
+border-radius:12px;
 
 overflow:hidden;
 
@@ -353,21 +342,11 @@ padding:18px;
 
 }
 
-.hero-card strong{
-
-display:block;
-
-font-size:1.1rem;
-
-}
-
-/* SECTION */
+/* SECTIONS */
 
 section{
 
 padding:60px 0;
-
-border-top:1px solid var(--line);
 
 }
 
@@ -379,7 +358,7 @@ margin-bottom:30px;
 
 .section-heading h2{
 
-font-size:clamp(2rem, 4vw, 3rem);
+font-size:clamp(2rem,4vw,3rem);
 
 margin-bottom:10px;
 
@@ -405,7 +384,7 @@ background:var(--panel);
 
 padding:24px;
 
-border-radius:10px;
+border-radius:12px;
 
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 
@@ -416,32 +395,6 @@ transition:0.3s;
 .card:hover{
 
 transform:translateY(-5px);
-
-}
-
-/* LIST */
-
-.skill-list,
-.service-list{
-
-list-style:none;
-
-display:grid;
-
-gap:10px;
-
-}
-
-.skill-list li,
-.service-list li{
-
-padding:10px;
-
-background:rgba(255,255,255,0.8);
-
-border-left:4px solid var(--gold);
-
-border-radius:6px;
 
 }
 
@@ -489,7 +442,7 @@ margin-top:15px;
 
 }
 
-/* FEATURE IMAGES */
+/* FEATURE IMAGE */
 
 .feature-image{
 
@@ -500,19 +453,17 @@ object-fit:cover;
 
 border-radius:12px;
 
-box-shadow:var(--shadow);
+cursor:pointer;
 
 transition:0.4s ease;
 
-cursor:pointer;
+box-shadow:var(--shadow);
 
 }
 
 .feature-image:hover{
 
 transform:scale(1.03);
-
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
 
 }
 
@@ -522,7 +473,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.3);
 
 width:100%;
 
-aspect-ratio:16/9;
+height:250px;
 
 border:none;
 
@@ -530,49 +481,19 @@ border-radius:12px;
 
 box-shadow:var(--shadow);
 
-background:black;
-
 }
 
-/* TABLE */
+/* GALLERY */
 
-.table-wrap{
+.gallery-section{
 
-overflow-x:auto;
+background:rgba(255,255,255,0.6);
 
-background:var(--panel);
+padding:20px;
 
-border-radius:10px;
+border-radius:12px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-
-}
-
-table{
-
-width:100%;
-
-border-collapse:collapse;
-
-min-width:650px;
-
-}
-
-th,
-td{
-
-padding:14px 16px;
-
-border-bottom:1px solid var(--line);
-
-text-align:left;
-
-}
-
-th{
-
-background:#111827;
-color:white;
+margin-bottom:40px;
 
 }
 
@@ -588,7 +509,7 @@ background:linear-gradient(
 
 padding:30px;
 
-border-radius:10px;
+border-radius:12px;
 
 display:grid;
 
@@ -622,25 +543,33 @@ color:white;
 
 text-align:center;
 
-padding:30px 16px;
+padding:40px 16px;
 
 margin-top:40px;
 
 }
 
-/* WHATSAPP */
+/* FLOATING SOCIALS */
 
-.whatsapp-float{
+.floating-socials{
 
 position:fixed;
 
 bottom:20px;
 right:20px;
 
+display:flex;
+flex-direction:column;
+gap:12px;
+
+z-index:9999;
+
+}
+
+.social-float{
+
 width:60px;
 height:60px;
-
-background:#25d366;
 
 display:flex;
 justify-content:center;
@@ -648,7 +577,7 @@ align-items:center;
 
 border-radius:50%;
 
-font-size:32px;
+font-size:28px;
 
 color:white;
 
@@ -656,22 +585,91 @@ text-decoration:none;
 
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 
-animation:pulse 2s infinite;
+transition:0.3s;
 
 }
 
-@keyframes pulse{
+.social-float:hover{
 
-0%{
-transform:scale(1);
-}
-
-50%{
 transform:scale(1.1);
+
 }
 
-100%{
+.whatsapp{
+background:#25d366;
+}
+
+.telegram{
+background:#0088cc;
+}
+
+.youtube{
+background:red;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+z-index:99999;
+
+padding-top:40px;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+overflow:auto;
+
+background:rgba(0,0,0,0.95);
+
+}
+
+.lightbox img{
+
+margin:auto;
+display:block;
+
+max-width:90%;
+max-height:85%;
+
+border-radius:10px;
+
+animation:zoom 0.3s;
+
+}
+
+.close-lightbox{
+
+position:absolute;
+
+top:20px;
+right:35px;
+
+font-size:40px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+@keyframes zoom{
+
+from{
+transform:scale(0.7);
+opacity:0;
+}
+
+to{
 transform:scale(1);
+opacity:1;
 }
 
 }
@@ -681,7 +679,7 @@ transform:scale(1);
 @media(max-width:840px){
 
 .hero,
-.contact-panel,
+contact-panel,
 .about-layout{
 
 grid-template-columns:1fr;
@@ -696,11 +694,19 @@ grid-template-columns:1fr;
 
 <body>
 
+<!-- INTRO MUSIC -->
+
+<audio id="introMusic" autoplay loop>
+
+<source src="intro.mp3" type="audio/mpeg">
+
+</audio>
+
 <!-- LOADER -->
 
 <div id="loader">
 
-Welcome to ChalloKingsman Site...
+WELCOME TO CHALLOKINGSMAN SITE...
 
 </div>
 
@@ -720,11 +726,11 @@ CHALLOKINGSMAN
 
 <li><a href="#top">Home</a></li>
 
+<li><a href="#about">About</a></li>
+
 <li><a href="#mydesigns">Designs</a></li>
 
 <li><a href="#services">Services</a></li>
-
-<li><a href="#about">About</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
@@ -733,7 +739,18 @@ CHALLOKINGSMAN
 <button class="button"
 onclick="toggleDarkMode()">
 
-Dark Mode
+🌙 Dark Mode
+
+</button>
+
+</li>
+
+<li>
+
+<button class="button"
+onclick="toggleMusic()">
+
+🎵 Music
 
 </button>
 
@@ -753,19 +770,15 @@ Dark Mode
 
 <section class="hero">
 
-<div class="hero-copy">
+<div>
 
 <p class="eyebrow">
 
-Graphic Designer | Creative Developer | Tech Wizard
+Web Developer | Graphic Designer | AI Assistance Specialist | Tech Wizard
 
 </p>
 
-<h1>
-
-ChalloKingsman Design Site
-
-</h1>
+<h1 id="typing"></h1>
 
 <p class="lead">
 
@@ -778,22 +791,25 @@ I combine design, data, AI, and digital skills training to create practical digi
 <a class="button"
 href="#mydesigns">
 
-View My Designs
-
-</a>
-
-<a class="button secondary"
-href="https://sites.google.com/view/challo-kingsman/home"
-target="_blank">
-
-View My Google Site
+<i class="fas fa-images"></i>
+View Designs
 
 </a>
 
 <a class="button"
 href="CLIENT FORM REQUEST.html">
 
+<i class="fas fa-briefcase"></i>
 Hire Me
+
+</a>
+
+<a class="button"
+href="https://youtube.com/@CHALLOKINGSMAN"
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+YouTube
 
 </a>
 
@@ -801,24 +817,21 @@ Hire Me
 
 </div>
 
-<!-- HERO CARD -->
-
 <div class="hero-card">
 
 <img id="profileImage"
 class="profile-photo"
-src="MEE.jpeg"
-alt="Evance Charles">
+src="MEE.jpeg">
 
 <footer>
 
 <strong>Evance Charles</strong>
 
-<span>
+<p>
 
 Bridging Data Intelligence and Creative Design
 
-</span>
+</p>
 
 </footer>
 
@@ -834,19 +847,12 @@ Bridging Data Intelligence and Creative Design
 
 <h2>About Me</h2>
 
-<p>
-
-Creative thinking, technical skills, and youth empowerment drive my work.
-
-</p>
-
 </div>
 
 <div class="about-layout">
 
 <img class="about-avatar"
-src="BEST.png"
-alt="Evance Charles">
+src="BEST.png">
 
 <div>
 
@@ -858,109 +864,28 @@ a Tech Wizard, passionate graphic designer and web developer.
 
 </p>
 
-<p>
-
-I specialize in
-<mark>Graphic Design</mark>,
-<mark>Data Analysis</mark>,
-<mark>Artificial Intelligence</mark>,
-<mark>Cybersecurity</mark>
-and
-<mark>Web Development</mark>.
-
-</p>
-
 <p class="highlight">
 
 My mission is to bridge creativity and technology while empowering youth through digital skills and innovation.
 
 </p>
 
-<button class="button"
-onclick="alert('Hello, my name is Evance Charles, also known as Challo Kingsman. I am a passionate Web Developer, Graphic Designer, Data Analyst, and Cybersecurity Skilled Tech Specialist. I specialize in Web Development, Graphic Design, AI Assistance, Data Analysis, and Digital Skills Training, helping individuals and communities embrace the power of technology and innovation. I have advanced my expertise through programs including the Ajira Digital Program, IBM Artificial Intelligence, Cisco Networking Academy for Cybersecurity, and W3Schools Web Development. In addition to technology, I also underwent paramilitary training through the National Youth Service, an experience that strengthened my discipline, leadership, teamwork, and resilience. As the founder of TechArtKING Technology, I continue to empower youths through digital skills, online opportunities, and creative innovation. I believe technology is not just about machines, it is about transforming lives and creating opportunities for the future.')">
-
-More About Me
-
-</button>
-
-<br><br>
-
-<div style="max-width:700px; margin-top:20px;">
+<br>
 
 <iframe class="video-frame"
-style="height:400px;"
+style="height:220px; max-width:500px;"
 src="https://www.youtube.com/embed/YSM5kqngbQc"
-title="Evance Charles Bio Video"
 allowfullscreen>
+
 </iframe>
 
 </div>
 
 </div>
 
-</div>
-
 </section>
 
-<!-- SKILLS -->
-
-<section>
-
-<div class="section-heading">
-
-<h2>Core Skills</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Design</h3>
-
-<ul class="skill-list">
-
-<li>Graphic Design</li>
-<li>Brand Identity</li>
-<li>Social Media Design</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Technology</h3>
-
-<ul class="skill-list">
-
-<li>Programming</li>
-<li>Artificial Intelligence</li>
-<li>Data Analysis</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Training</h3>
-
-<ul class="skill-list">
-
-<li>Cybersecurity</li>
-<li>Digital Skills</li>
-<li>Computer Literacy</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MY DESIGNS -->
+<!-- DESIGNS -->
 
 <section id="mydesigns">
 
@@ -968,160 +893,71 @@ allowfullscreen>
 
 <h2>My Designs & Work Samples</h2>
 
-<p>
-
-A collection of my creative projects including logos, posters, banners and videos.
-
-</p>
-
 </div>
 
 <!-- LOGOS -->
 
-<h2 style="margin-bottom:20px;">
+<div class="gallery-section">
 
-🎨 Logo Designs
+<h2>🎨 Logo Designs</h2>
 
-</h2>
+<br>
 
 <div class="grid">
 
-<img class="feature-image"
-src="Main Logo.png">
-
-<img class="feature-image"
-src="Techart King Logo.jpg">
-
-<img class="feature-image"
-src="Tech Art Logo.png">
-
-<img class="feature-image"
-src="Kingsman logo before.png">
-
-<img class="feature-image"
-src="My Data Analysis Logo.png">
-
-<img class="feature-image"
-src="Professional Education Badge Logo_20251008_132533_0000.png">
-
-<img class="feature-image"
-src="Ogwambo logo.png">
-
-<img class="feature-image"
-src="Logo wall.jpg">
-
-<img class="feature-image"
-src="Eldosky computers logo.png">
+<img class="feature-image" src="Main Logo.png">
+<img class="feature-image" src="Techart King Logo.jpg">
+<img class="feature-image" src="Ogwambo logo.png">
+<img class="feature-image" src="My Data Analysis Logo.png">
 
 </div>
 
-<br><br>
+</div>
 
 <!-- POSTERS -->
 
-<h2 style="margin-bottom:20px;">
+<div class="gallery-section">
 
-📢 Poster Designs
+<h2>📢 Poster Designs</h2>
 
-</h2>
-
-<div class="grid">
-
-<img class="feature-image"
-src="Politics Poster design.jpg">
-
-<img class="feature-image"
-src="HAPPY VALENTINE’S DAY.png">
-
-<img class="feature-image"
-src="Flyer Design.jpg">
-
-<img class="feature-image"
-src="Worship Night design.png">
-
-<img class="feature-image"
-src="Evance Charles Graphic Designer kuoshwa.png">
-
-<img class="feature-image"
-src="WEWE (1).png">
-
-<img class="feature-image"
-src="Musical Festival Poster.gif">
-
-</div>
-
-<br><br>
-
-<!-- BANNERS -->
-
-<h2 style="margin-bottom:20px;">
-
-🖼️ Banner Designs
-
-</h2>
+<br>
 
 <div class="grid">
 
-<img class="feature-image"
-src="Youtube Cover photo(0).png">
-
-<img class="feature-image"
-src="My Resume-CV (1).jpg">
-
-<img class="feature-image"
-src="CHALLOKINGSMAN GYM (1).png">
-
-<img class="feature-image"
-src="My Hotel Menu.png">
-
-<img class="feature-image"
-src="My Calendar.png">
-
-<img class="feature-image"
-src="Calendar last year.png">
-
-<img class="feature-image"
-src="Card Design.jpg">
+<img class="feature-image" src="Politics Poster design.jpg">
+<img class="feature-image" src="Worship Night design.png">
+<img class="feature-image" src="Flyer Design.jpg">
+<img class="feature-image" src="HAPPY VALENTINE’S DAY.png">
 
 </div>
 
-<br><br>
+</div>
 
 <!-- VIDEOS -->
 
-<h2 style="margin-bottom:20px;">
+<div class="gallery-section">
 
-🎬 Video Projects and Animation
+<h2>🎬 Video Projects</h2>
 
-</h2>
+<br>
 
 <div class="grid">
 
 <iframe class="video-frame"
 src="https://www.youtube.com/embed/vHjFgUxObgc"
 allowfullscreen>
+
 </iframe>
 
 <iframe class="video-frame"
 src="https://www.youtube.com/embed/Ec0a1Kl1c8k"
 allowfullscreen>
-</iframe>
 
-<iframe class="video-frame"
-src="https://www.youtube.com/embed/MV6zMzqJ_RQ"
-allowfullscreen>
 </iframe>
 
 </div>
 
-<br>
-
-<button class="button secondary"
-onclick="window.open('https://youtube.com/@CHALLOKINGSMAN', '_blank')">
-
-View My Channel for more
-
-</button>
+</div>
 
 </section>
 
@@ -1141,41 +977,35 @@ View My Channel for more
 
 <h3>Creative Services</h3>
 
-<ul class="service-list">
+<p>
 
-<li>Logo Design</li>
-<li>Poster Design</li>
-<li>Branding</li>
+Logo Design, Branding, Posters, Banners and Social Media Designs.
 
-</ul>
+</p>
 
 </div>
 
 <div class="card">
 
-<h3>Data & AI</h3>
+<h3>AI & Data</h3>
 
-<ul class="service-list">
+<p>
 
-<li>Data Analysis</li>
-<li>AI Solutions</li>
-<li>Visualization</li>
+AI Assistance, Data Analysis, Visualization and Digital Solutions.
 
-</ul>
+</p>
 
 </div>
 
 <div class="card">
 
-<h3>Digital Training</h3>
+<h3>Training</h3>
 
-<ul class="service-list">
+<p>
 
-<li>Computer Packages</li>
-<li>Cybersecurity Awareness</li>
-<li>Online Work Mentorship</li>
+Computer Packages, Cybersecurity Awareness and Online Work Mentorship.
 
-</ul>
+</p>
 
 </div>
 
@@ -1195,7 +1025,7 @@ View My Channel for more
 
 <p>
 
-Ready for design, AI, data, or digital support?
+Ready for design, AI, data or digital support?
 
 </p>
 
@@ -1206,67 +1036,39 @@ Ready for design, AI, data, or digital support?
 <a class="button"
 href="mailto:evancecharles@gmail.com">
 
-<i class="fas fa-envelope"></i> Email Me
+<i class="fas fa-envelope"></i>
+Email
 
 </a>
 
-<a class="button secondary"
+<a class="button"
 href="https://wa.me/254741179932"
 target="_blank">
 
-<i class="fab fa-whatsapp"></i> WhatsApp
+<i class="fab fa-whatsapp"></i>
+WhatsApp
 
 </a>
 
-<a class="button secondary"
-href="https://t.me/YOUR_TELEGRAM_CHANNEL"
-target="_blank">
-
-<i class="fab fa-telegram"></i> Telegram
-
-</a>
-
-<a class="button secondary"
-href="https://facebook.com/challokingsman"
-target="_blank">
-
-<i class="fab fa-facebook-f"></i> Facebook
-
-</a>
-
-</div>
-
-<div>
-<p>
-
-You can view and Follow my Channels for more updates and content.
-
-</p>
-</div>
-
-<a class="button secondary"
-href="https://youtube.com/@CHALLOKINGSMAN"
-target="_blank">
-
-<i class="fab fa-youtube"></i> YouTube Channel
-
-</a>
-
-<a class="button secondary"
-href="https://whatsapp.com/channel/0029Vb7MjFQ0lwghz3VvAq23"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i> WhatsApp Channel
-
-</a>
-
-<a class="button secondary"
+<a class="button"
 href="https://t.me/teckartking"
 target="_blank">
 
-<i class="fab fa-telegram"></i> Telegram Channel
+<i class="fab fa-telegram"></i>
+Telegram
 
 </a>
+
+<a class="button"
+href="https://youtube.com/@CHALLOKINGSMAN"
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+YouTube
+
+</a>
+
+</div>
 
 </div>
 
@@ -1278,35 +1080,79 @@ target="_blank">
 
 <footer class="site-footer">
 
+<h2>CHALLOKINGSMAN</h2>
+
 <p>
 
-© 2026 CHALLOKINGSMAN Design Site
+Bridging Data Intelligence and Creative Design
 
 </p>
 
 <p>
 
-Tel: 0741179932
+📞 Tel: 0741179932
 
 </p>
 
 <p>
 
-Designed & Presented by CHALLOKINGSMAN
+📧 Email: evancecharles@gmail.com
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+<p>
+
+<i>Designed & Presented by CHALLOKINGSMAN</i>
 
 </p>
 
 </footer>
 
-<!-- WHATSAPP -->
+<!-- FLOATING SOCIALS -->
+
+<div class="floating-socials">
 
 <a href="https://wa.me/254741179932"
-class="whatsapp-float"
+class="social-float whatsapp"
 target="_blank">
 
-💬
+<i class="fab fa-whatsapp"></i>
 
 </a>
+
+<a href="https://t.me/teckartking"
+class="social-float telegram"
+target="_blank">
+
+<i class="fab fa-telegram"></i>
+
+</a>
+
+<a href="https://youtube.com/@CHALLOKINGSMAN"
+class="social-float youtube"
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox" class="lightbox">
+
+<span class="close-lightbox">&times;</span>
+
+<img id="lightbox-img">
+
+</div>
 
 <!-- JAVASCRIPT -->
 
@@ -1319,19 +1165,56 @@ window.addEventListener("load", function(){
 document.getElementById("loader")
 .style.display = "none";
 
-});
+if(localStorage.getItem("darkMode") === "enabled"){
 
-/* ABOUT */
-
-function showAbout(){
-
-alert(
-"I am a passionate Tech Wizard skilled in Graphic Design, Data Analysis, Artificial Intelligence, Cybersecurity, and Digital Training."
-);
+document.body.classList.add("dark-mode");
 
 }
 
-/* CHANGE IMAGE */
+});
+
+/* DARK MODE */
+
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+
+localStorage.setItem("darkMode", "enabled");
+
+}
+
+else{
+
+localStorage.setItem("darkMode", "disabled");
+
+}
+
+}
+
+/* MUSIC */
+
+const music =
+document.getElementById("introMusic");
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}
+
+else{
+
+music.pause();
+
+}
+
+}
+
+/* IMAGE CHANGE */
 
 function changeImage(){
 
@@ -1358,16 +1241,73 @@ profileImage.style.opacity = "1";
 
 }
 
-/* DARK MODE */
+/* TYPING EFFECT */
 
-function toggleDarkMode(){
+const text =
+"CHALLOKINGSMAN DESIGN SITE";
 
-document.body.classList.toggle("dark-mode");
+let i = 0;
+
+function typingEffect(){
+
+if(i < text.length){
+
+document.getElementById("typing")
+.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typingEffect, 100);
+
+}
+
+}
+
+typingEffect();
+
+/* LIGHTBOX */
+
+const images =
+document.querySelectorAll(".feature-image");
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImg =
+document.getElementById("lightbox-img");
+
+const closeBtn =
+document.querySelector(".close-lightbox");
+
+images.forEach(img => {
+
+img.addEventListener("click", () => {
+
+lightbox.style.display = "block";
+
+lightboxImg.src = img.src;
+
+});
+
+});
+
+closeBtn.onclick = function(){
+
+lightbox.style.display = "none";
+
+}
+
+lightbox.onclick = function(e){
+
+if(e.target !== lightboxImg){
+
+lightbox.style.display = "none";
+
+}
 
 }
 
 </script>
 
 </body>
-
 </html>
